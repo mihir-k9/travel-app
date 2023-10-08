@@ -1,7 +1,7 @@
 import os
 import streamlit as st
 
-from dotenv import load_dotenv
+# from dotenv import load_dotenv
 from backend import * 
 
 load_dotenv()
