@@ -4,7 +4,7 @@ import streamlit as st
 # from dotenv import load_dotenv
 from backend import * 
 
-load_dotenv()
+# load_dotenv()
 hf_token = os.environ.get('HUGGING_FACE_TOKEN')
 
 
