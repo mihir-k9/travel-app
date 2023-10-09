@@ -1,3 +1,4 @@
 travel-env
 test.py
 .env
+.DS_Store
