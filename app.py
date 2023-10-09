@@ -1,10 +1,12 @@
 import os
 import streamlit as st
 
-# from dotenv import load_dotenv
+# local testing only
+from dotenv import load_dotenv
 from backend import * 
 
-# load_dotenv()
+# local testing only
+load_dotenv()
 hf_token = os.environ.get('HUGGING_FACE_TOKEN')
 
 
@@ -22,7 +24,8 @@ def main():
         st.image(uploaded_img, caption='Uploaded Image', use_column_width=True)
         
         img_labels = classify_image(uploaded_img.name)
-        label_type = img_labels[1]['label']
+        print('\n', img_labels[0], '\n', type(img_labels))
+        label_type = img_labels[0][1]['label']
         
         travel_location = get_location(label_type, hf_token)
         location = show_output(travel_location)

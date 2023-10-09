@@ -38,8 +38,8 @@ def get_location(type, hf_token):
 
 def show_output(output):
 
-    if 'generated_text' in output[0]:
-        return output[0]['generated_text']
+    if 'generated_text' in output[0][0]:
+        return output[0][0]['generated_text']
     else:
         print(output)
         return "Error received. Please retry."
