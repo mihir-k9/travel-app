@@ -2,3 +2,5 @@ time
 requests
 transformers
 backend
+torch
+torchaudio
