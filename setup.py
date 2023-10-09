@@ -13,6 +13,8 @@ setup(
         'time',
         'requests',
         'transformers',
-        'backend'
+        'backend',
+        'torch',
+        'torchaudio'
     ],
 )
