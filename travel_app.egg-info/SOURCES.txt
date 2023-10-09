@@ -1,6 +1,0 @@
-setup.py
-travel_app.egg-info/PKG-INFO
-travel_app.egg-info/SOURCES.txt
-travel_app.egg-info/dependency_links.txt
-travel_app.egg-info/requires.txt
-travel_app.egg-info/top_level.txt
