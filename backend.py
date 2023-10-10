@@ -11,7 +11,7 @@ def timing_decorator(func):
         elapsed_time = end_time - start_time
         
         runtime_str = f"{func.__name__} took {elapsed_time:.2f} seconds to run"
-        return result, runtime_str
+        return runtime_str, result
     return wrapper
 
 
@@ -25,7 +25,6 @@ def classify_image(url):
 
 @timing_decorator
 def get_location(type, hf_token):
-    
 
     llm_url = "https://api-inference.huggingface.co/models/google/flan-t5-xxl"
     headers = {"Authorization": f"Bearer {hf_token}"}
@@ -38,8 +37,8 @@ def get_location(type, hf_token):
 
 def show_output(output):
 
-    if 'generated_text' in output[0][0]:
-        return output[0][0]['generated_text']
+    if 'generated_text' in output[0]:
+        return output[0]['generated_text']
     else:
-        print(output)
+        # print(output)
         return "Error received. Please retry."
