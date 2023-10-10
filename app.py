@@ -3,11 +3,11 @@ import pandas as pd
 import streamlit as st
 
 # local testing only
-from dotenv import load_dotenv
+# from dotenv import load_dotenv
 from backend import * 
 
 # local testing only
-load_dotenv()
+# load_dotenv()
 hf_token = os.environ.get('HUGGING_FACE_TOKEN')
 
 def increment(x):
