@@ -40,5 +40,5 @@ def show_output(output):
     if 'generated_text' in output[0]:
         return output[0]['generated_text']
     else:
-        # print(output)
+        print(output)
         return "Error received. Please retry."
